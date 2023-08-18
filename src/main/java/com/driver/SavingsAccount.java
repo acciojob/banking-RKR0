@@ -18,7 +18,8 @@ public class SavingsAccount extends BankAccount{
     	try {
     		if(maxWithdrawalLimit<0)
     				throw new Exception("Maximum Withdraw Limit Exceed");
-    		withdraw(amount);
+    		super.withdraw(amount);
+    		maxWithdrawalLimit -=1; 
     	}
     	catch(Exception e) {
     		System.out.println(e.getMessage());
@@ -38,5 +39,11 @@ public class SavingsAccount extends BankAccount{
     		return getBalance()*Math.pow(1+this.rate/(1.0*times),nn);
     		
     }
+	public double getRate() {
+		return rate;
+	}
+	public double getMaxWithdrawalLimit() {
+		return maxWithdrawalLimit;
+	}
 
 }

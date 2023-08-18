@@ -36,4 +36,10 @@ public class CurrentAccount extends BankAccount{
 
     }
 
+	public String getTradeLicenseId() {
+		return tradeLicenseId;
+	}
+    
+    
+
 }
